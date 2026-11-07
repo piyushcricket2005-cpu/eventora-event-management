@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover, explore and register for the best events around you with Eventora." />
+  <title>Eventora — Find your next experience</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="announcement"><span class="live-dot"></span> Your next great experience is one click away <span class="announcement-link">Explore events <span aria-hidden="true">↗</span></span></div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Eventora home"><span class="brand-mark">e</span>eventora<span class="brand-period">.</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#events">Explore events</a><a href="#about">About</a><a href="#newsletter">Stay in the loop</a>
+    </nav>
+    <div class="header-actions"><button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">☼</button><a class="button button-dark button-small" href="#events">Find an event <span>↗</span></a></div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> MAKE ROOM FOR THE UNEXPECTED</div>
+        <h1>Life is better<br>when it's <span class="highlight-word">experienced.</span></h1>
+        <p class="hero-description">From electric live shows to ideas worth sharing. Find the events that move you, inspire you, and bring people together.</p>
+        <div class="hero-actions"><a href="#events" class="button button-primary">Explore experiences <span>↗</span></a><a href="#about" class="text-link">How it works <span>→</span></a></div>
+        <div class="hero-proof"><div class="avatar-stack"><span>J</span><span>A</span><span>M</span><span>R</span></div><div><strong>Good things happen together.</strong><small>Join a community of curious people.</small></div></div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image-main"><img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1200&q=85" alt="Crowd enjoying a live music concert"></div>
+        <div class="floating-note note-top"><span class="note-icon">✦</span><div><strong>Find your people</strong><small>Make every moment count</small></div></div>
+        <div class="floating-note note-bottom"><span class="note-number">01</span><div><strong>Discover something new</strong><small>Experiences worth remembering</small></div></div>
+        <div class="hero-stamp">GOOD<br>VIBES<br>ONLY <span>✳</span></div>
+      </div>
+      <div class="hero-bottom"><span>SCROLL TO EXPLORE</span><span class="scroll-line"></span><span>01 / 03</span></div>
+    </section>
+
+    <section class="event-section section-wrap" id="events">
+      <div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> THE GOOD STUFF</div><h2>Find your next<br><span class="serif-accent">something.</span></h2></div><p>Curated moments, memorable places, and people who make it all worthwhile. Your next story starts here.</p></div>
+      <div class="event-toolbar">
+        <div class="category-list" id="categoryFilters" aria-label="Filter events by category">
+          <button class="filter-chip active" data-category="All">All events <span class="chip-count" id="allCount">08</span></button>
+          <button class="filter-chip" data-category="Music">Music</button><button class="filter-chip" data-category="Technology">Technology</button><button class="filter-chip" data-category="Art">Art & culture</button><button class="filter-chip" data-category="Food">Food</button><button class="filter-chip" data-category="Business">Business</button>
+        </div>
+        <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search events..." aria-label="Search events"></label>
+      </div>
+      <div class="results-line"><span id="resultsCount">Showing 8 experiences</span><span>HANDPICKED FOR YOU <span class="tiny-spark">✳</span></span></div>
+      <div class="event-grid" id="eventGrid" aria-live="polite"></div>
+      <div class="empty-state" id="emptyState" hidden><div class="empty-icon">⌕</div><h3>No events found</h3><p>Try another search or category. Your next experience is out there.</p><button class="button button-outline" id="clearFilters">Clear filters</button></div>
+    </section>
+
+    <section class="feature-band" id="about"><div class="feature-inner"><div class="feature-art"><div class="feature-orbit orbit-one"></div><div class="feature-orbit orbit-two"></div><div class="feature-center">✳</div><span class="orbit-label label-one">DISCOVER</span><span class="orbit-label label-two">CONNECT</span><span class="orbit-label label-three">EXPERIENCE</span></div><div class="feature-copy"><div class="eyebrow eyebrow-light"><span class="eyebrow-line"></span> MORE THAN JUST A TICKET</div><h2>Make plans.<br>Make <span>memories.</span></h2><p>We believe the best moments happen when you step out, show up, and try something different. Eventora makes finding those moments feel effortless.</p><div class="feature-points"><div><span>01</span><p><strong>Find your thing</strong><small>Explore experiences across interests.</small></p></div><div><span>02</span><p><strong>Save your spot</strong><small>Register in a few simple steps.</small></p></div><div><span>03</span><p><strong>Show up & shine</strong><small>Make memories worth keeping.</small></p></div></div></div></div></section>
+
+    <section class="newsletter-section section-wrap" id="newsletter"><div class="newsletter-card"><div><div class="eyebrow"><span class="eyebrow-line"></span> THE GOOD NEWSLETTER</div><h2>Good plans land<br>in your <span class="serif-accent">inbox.</span></h2><p>Get the latest events, fresh finds, and a little inspiration. No noise, just the good stuff.</p></div><form id="newsletterForm" class="newsletter-form"><label for="newsletterEmail">YOUR EMAIL ADDRESS</label><div class="newsletter-input-row"><input id="newsletterEmail" type="email" placeholder="you@example.com" required><button type="submit" aria-label="Subscribe">→</button></div><small id="newsletterMessage">By subscribing, you agree to receive occasional updates from Eventora.</small></form><div class="newsletter-spark">✳</div></div></section>
+  </main>
+
+  <footer class="site-footer"><a class="brand brand-footer" href="#home"><span class="brand-mark">e</span>eventora<span class="brand-period">.</span></a><p>Find your people. Find your moment.</p><div class="footer-right"><span>© 2026 EVENTORA</span><a href="#home">BACK TO TOP ↑</a></div></footer>
+
+  <div class="modal-backdrop" id="eventModal" aria-hidden="true"><section class="event-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" id="modalClose" aria-label="Close dialog">×</button><div class="modal-image" id="modalImage"></div><div class="modal-content"><div class="modal-kicker" id="modalCategory"></div><h2 id="modalTitle"></h2><p id="modalDescription"></p><div class="modal-meta" id="modalMeta"></div><div class="modal-divider"></div><h3>Save your spot</h3><form id="registrationForm" class="registration-form" novalidate><input type="hidden" id="selectedEventId"><div class="form-row"><label>Full name<input id="fullName" type="text" placeholder="Your name" autocomplete="name" required></label><label>Email address<input id="email" type="email" placeholder="you@example.com" autocomplete="email" required></label></div><div class="form-row"><label>Phone number<input id="phone" type="tel" placeholder="10-digit mobile number" autocomplete="tel" required></label><label>Number of tickets<select id="ticketCount"><option value="1">1 ticket</option><option value="2">2 tickets</option><option value="3">3 tickets</option><option value="4">4 tickets</option></select></label></div><label class="consent-check"><input id="consent" type="checkbox" required><span>I agree to be contacted with event-related updates.</span></label><p class="form-error" id="formError" role="alert"></p><button class="button button-primary register-submit" type="submit">Complete registration <span>↗</span></button><p class="form-footnote">Demo project: registration details are saved locally in this browser.</p></form></div></section></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
